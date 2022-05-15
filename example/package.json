@@ -1,0 +1,11 @@
+{
+  "name": "parcel-plugin-eta-example",
+  "private": true,
+  "license": "UNLICENSED",
+  "dependencies": {
+    "parcel-plugin-eta": "workspace:../"
+  },
+  "devDependencies": {
+    "parcel": "^2.5.0"
+  }
+}

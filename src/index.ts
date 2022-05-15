@@ -2,7 +2,9 @@ import path from 'path'
 import { Transformer } from '@parcel/plugin'
 import * as Eta from 'eta'
 
-const etaTransformer = new Transformer({
+type EtaConfig = typeof Eta.config
+
+const etaTransformer = new Transformer<EtaConfig>({
   async loadConfig({ config }) {
     let configFile = await config.getConfig([
       'eta.config.json',
@@ -14,8 +16,10 @@ const etaTransformer = new Transformer({
         config.invalidateOnStartup()
       }
 
-      return configFile.contents
+      return configFile.contents as EtaConfig
     }
+
+    return null!
   },
 
   async transform({ asset, config }) {
