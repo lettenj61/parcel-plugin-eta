@@ -1,6 +1,6 @@
 # parcel-transformer-eta
 
-[Parcel](https://github.com/parcel-bundler/parcel) (`2.x`) plugin to transform HTML templates with [eta](https://github.com/etajs/eta).
+[Parcel](https://github.com/parcel-bundler/parcel) (`2.x`) plugin to transform HTML templates with [eta](https://github.com/eta-dev/eta).
 
 ## Development
 
