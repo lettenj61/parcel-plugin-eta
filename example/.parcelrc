@@ -1,0 +1,6 @@
+{
+  "extends": "@parcel/config-default",
+  "transformers": {
+    "*.eta": ["parcel-transformer-eta", "..."]
+  }
+}

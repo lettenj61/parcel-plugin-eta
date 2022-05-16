@@ -1,7 +1,8 @@
 {
-  "name": "parcel-plugin-eta",
+  "name": "parcel-transformer-eta",
   "version": "1.0.0",
   "description": "",
+  "main": "lib/index.js",
   "files": [
     "lib"
   ],
@@ -26,6 +27,7 @@
     "typescript": "^4.6.4"
   },
   "dependencies": {
+    "@parcel/config-default": "^2.5.0",
     "@parcel/plugin": "^2.5.0",
     "eta": "^1.12.3"
   },

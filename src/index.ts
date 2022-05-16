@@ -23,12 +23,16 @@ const etaTransformer = new Transformer<EtaConfig>({
   },
 
   async transform({ asset, config }) {
-    const etaConfig = (config ?? Eta.config) as typeof Eta.config
+    const currentConfig = (config || {}) as Record<string, any>
+    const etaConfig = {
+      ...Eta.config,
+      ...currentConfig,
+    }
     const content = await asset.getCode()
     const render = Eta.compile(content, {
       root: path.dirname(asset.filePath),
       filename: asset.filePath,
-      ...etaConfig,
+      ...etaConfig
     })
 
     asset.type = 'html'
