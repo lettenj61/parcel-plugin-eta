@@ -9,7 +9,7 @@ const etaTransformer = new Transformer<EtaConfig>({
     let configFile = await config.getConfig([
       'eta.config.json',
       'eta.config.js'
-    ], null)
+    ], void 0)
 
     if (configFile) {
       if (path.extname(configFile.filePath) === '.js') {
